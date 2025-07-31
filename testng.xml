@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Trello Test Suite" verbose="1">
+    <test name="Trello E2E Test" preserve-order="true">
+        <parameter name="browser" value="chrome"/>
+        <parameter name="headless" value="false"/>
+        <packages>
+            <package name="tests.*"/>
+        </packages>
+        <classes>
+            <class name="tests.TrelloE2ETest">
+                <methods>
+                    <include name="trelloE2ETest"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite> 
