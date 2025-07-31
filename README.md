@@ -6,26 +6,40 @@ A comprehensive Selenium UI automation test suite for Trello using Java, TestNG,
 - Firefox browser (latest version)
 - TestNG plugin in your IDE (if running from IDE)
 
-## Project Structure
-src/
-├── main/java/
-│   ├── pages/                    # Page Object Model classes
-│   │   ├── Loginpage1.java      # Login functionality
-│   │   ├── CreateCards.java     # Create lists and cards
-│   │   ├── AttachedPDF.java     # PDF attachment functionality
-│   │   └── MoveCards.java       # Drag and drop functionality
-│   └── utils/                    # Utility classes
-│       ├── ConfigReader.java     # Configuration reader
-│       └── WaitUtils.java       # Explicit wait utilities
-└── test/
-    ├── java/tests/              # Test classes
-    │   └── TrelloE2ETest.java   # Main test suite
-    └── resources/               # Test resources
-        └── Dnyneshwar Thakare CV NEW.pdf  # Sample PDF for attachment
+---
 
-test-output/                     # Generated test reports
-└── ExtentReport.html           # Detailed HTML test report
+##  Project Structure
+
 ```
+UI-Automation/
+├── pom.xml                  # Maven dependencies
+├── testng.xml               # TestNG suite config
+├── README.md                # Project documentation
+├── src/
+│   ├── main/java/
+│   │   ├── pages/           # Page Object Model classes
+│   │   │   ├── Loginpage1.java      # Login
+│   │   │   ├── CreateBoard.java     # Board creation
+│   │   │   ├── CreateCards.java     # Lists/cards
+│   │   │   ├── AttachedPDF.java     # PDF attachment
+│   │   │   └── MoveCards.java       # Drag & drop
+│   │   └── utils/
+│   │       ├── ConfigReader.java    # Config loader
+│   │       ├── WaitUtils.java       # Explicit waits
+│   │       └── TestConfig.java      # Test config
+│   └── resources/
+│       └── env.properties           # (Optional) Env config
+├── src/test/java/tests/
+│   ├── TrelloE2ETest.java           # Main test suite
+│   └── ExtentHtmlReporter.java      # ExtentReports wrapper
+├── src/test/resources/
+│   └── file-sample_150kB.pdf        # Sample PDF for attachment
+└── test-output/
+    ├── ExtentReport.html            # Detailed HTML report
+    └── ...                          # Other reports/logs
+```
+
+---
 
 ## Running Tests
 
